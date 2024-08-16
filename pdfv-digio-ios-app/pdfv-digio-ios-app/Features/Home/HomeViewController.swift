@@ -18,11 +18,21 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
-        
-        view.addSubview(label)
+        setup()
+    }
+}
 
+extension HomeViewController: ViewCodable {
+    func setupSubviews() {
+        view.addSubview(label)
+    }
+
+    func setupConstraints() {
         label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+    }
+
+    func setupCompletion() {
+        view.backgroundColor = .white
     }
 }
