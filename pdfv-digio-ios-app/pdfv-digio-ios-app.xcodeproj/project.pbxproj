@@ -8,12 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		EC23388A2C6FC90A00BEA0F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338892C6FC90A00BEA0F8 /* AppDelegate.swift */; };
-		EC23388E2C6FC90A00BEA0F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC23388D2C6FC90A00BEA0F8 /* ViewController.swift */; };
-		EC2338912C6FC90A00BEA0F8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = EC2338902C6FC90A00BEA0F8 /* Base */; };
 		EC2338932C6FC90A00BEA0F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC2338922C6FC90A00BEA0F8 /* Assets.xcassets */; };
 		EC2338A12C6FC90B00BEA0F8 /* pdfv_digio_ios_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338A02C6FC90B00BEA0F8 /* pdfv_digio_ios_appTests.swift */; };
 		EC2338AB2C6FC90B00BEA0F8 /* pdfv_digio_ios_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338AA2C6FC90B00BEA0F8 /* pdfv_digio_ios_appUITests.swift */; };
 		EC2338AD2C6FC90B00BEA0F8 /* pdfv_digio_ios_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338AC2C6FC90B00BEA0F8 /* pdfv_digio_ios_appUITestsLaunchTests.swift */; };
+		EC2338BF2C6FDF1B00BEA0F8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338BE2C6FDF1B00BEA0F8 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +35,6 @@
 /* Begin PBXFileReference section */
 		EC2338862C6FC90A00BEA0F8 /* pdfv-digio-ios-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pdfv-digio-ios-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2338892C6FC90A00BEA0F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC23388D2C6FC90A00BEA0F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EC2338902C6FC90A00BEA0F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC2338922C6FC90A00BEA0F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC2338972C6FC90A00BEA0F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC23389C2C6FC90B00BEA0F8 /* pdfv-digio-ios-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pdfv-digio-ios-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +42,7 @@
 		EC2338A62C6FC90B00BEA0F8 /* pdfv-digio-ios-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pdfv-digio-ios-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC2338AA2C6FC90B00BEA0F8 /* pdfv_digio_ios_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdfv_digio_ios_appUITests.swift; sourceTree = "<group>"; };
 		EC2338AC2C6FC90B00BEA0F8 /* pdfv_digio_ios_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdfv_digio_ios_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EC2338BE2C6FDF1B00BEA0F8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				EC2338892C6FC90A00BEA0F8 /* AppDelegate.swift */,
-				EC23388D2C6FC90A00BEA0F8 /* ViewController.swift */,
-				EC23388F2C6FC90A00BEA0F8 /* Main.storyboard */,
+				EC2338BC2C6FDEE400BEA0F8 /* Features */,
 				EC2338922C6FC90A00BEA0F8 /* Assets.xcassets */,
 				EC2338972C6FC90A00BEA0F8 /* Info.plist */,
 			);
@@ -119,6 +116,22 @@
 				EC2338AC2C6FC90B00BEA0F8 /* pdfv_digio_ios_appUITestsLaunchTests.swift */,
 			);
 			path = "pdfv-digio-ios-appUITests";
+			sourceTree = "<group>";
+		};
+		EC2338BC2C6FDEE400BEA0F8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				EC2338BD2C6FDEF500BEA0F8 /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		EC2338BD2C6FDEF500BEA0F8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EC2338BE2C6FDF1B00BEA0F8 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,7 +243,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC2338932C6FC90A00BEA0F8 /* Assets.xcassets in Resources */,
-				EC2338912C6FC90A00BEA0F8 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +267,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC23388E2C6FC90A00BEA0F8 /* ViewController.swift in Sources */,
 				EC23388A2C6FC90A00BEA0F8 /* AppDelegate.swift in Sources */,
+				EC2338BF2C6FDF1B00BEA0F8 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,17 +307,6 @@
 			productRef = EC2338BA2C6FCD5C00BEA0F8 /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		EC23388F2C6FC90A00BEA0F8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EC2338902C6FC90A00BEA0F8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EC2338AE2C6FC90B00BEA0F8 /* Debug */ = {
@@ -437,7 +438,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "pdfv-digio-ios-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -464,7 +464,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "pdfv-digio-ios-app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
