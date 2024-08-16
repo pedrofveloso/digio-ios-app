@@ -9,11 +9,20 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    private lazy var header = HomeHeaderView()
+
     private lazy var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Hello world!"
         return label
+    }()
+
+    private lazy var vStack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [header, label])
+        stack.axis = .vertical
+        stack.spacing = 8.0
+        return stack
     }()
 
     override func viewDidLoad() {
@@ -24,12 +33,12 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: ViewCodable {
     func setupSubviews() {
-        view.addSubview(label)
+        view.addSubview(vStack)
     }
 
     func setupConstraints() {
-        label.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        vStack
+            .edges(to: view)
     }
 
     func setupCompletion() {

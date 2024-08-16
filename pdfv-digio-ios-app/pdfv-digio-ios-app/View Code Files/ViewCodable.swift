@@ -19,7 +19,7 @@ extension ViewCodable {
         setupConstraints()
         setupCompletion()
     }
-    
+
     func setupCompletion() {
         // making this function optional
     }

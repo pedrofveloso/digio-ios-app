@@ -14,6 +14,8 @@
 		EC2338AD2C6FC90B00BEA0F8 /* pdfv_digio_ios_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338AC2C6FC90B00BEA0F8 /* pdfv_digio_ios_appUITestsLaunchTests.swift */; };
 		EC2338BF2C6FDF1B00BEA0F8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338BE2C6FDF1B00BEA0F8 /* HomeViewController.swift */; };
 		EC2338C32C6FE52D00BEA0F8 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338C22C6FE52D00BEA0F8 /* ViewCodable.swift */; };
+		EC2338C62C6FE81700BEA0F8 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338C52C6FE81700BEA0F8 /* HomeHeaderView.swift */; };
+		EC2338C82C6FEADE00BEA0F8 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338C72C6FEADE00BEA0F8 /* UIView+Constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		EC2338AC2C6FC90B00BEA0F8 /* pdfv_digio_ios_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pdfv_digio_ios_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EC2338BE2C6FDF1B00BEA0F8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EC2338C22C6FE52D00BEA0F8 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
+		EC2338C52C6FE81700BEA0F8 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		EC2338C72C6FEADE00BEA0F8 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				EC2338BE2C6FDF1B00BEA0F8 /* HomeViewController.swift */,
+				EC2338C42C6FE7D100BEA0F8 /* Components */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -149,8 +154,17 @@
 			isa = PBXGroup;
 			children = (
 				EC2338C22C6FE52D00BEA0F8 /* ViewCodable.swift */,
+				EC2338C72C6FEADE00BEA0F8 /* UIView+Constraints.swift */,
 			);
 			path = "View Code Files";
+			sourceTree = "<group>";
+		};
+		EC2338C42C6FE7D100BEA0F8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EC2338C52C6FE81700BEA0F8 /* HomeHeaderView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,7 +300,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC2338C62C6FE81700BEA0F8 /* HomeHeaderView.swift in Sources */,
 				EC23388A2C6FC90A00BEA0F8 /* AppDelegate.swift in Sources */,
+				EC2338C82C6FEADE00BEA0F8 /* UIView+Constraints.swift in Sources */,
 				EC2338BF2C6FDF1B00BEA0F8 /* HomeViewController.swift in Sources */,
 				EC2338C32C6FE52D00BEA0F8 /* ViewCodable.swift in Sources */,
 			);
