@@ -141,6 +141,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				EC2338BB2C6FCD5C00BEA0F8 /* PBXTargetDependency */,
 			);
 			name = "pdfv-digio-ios-app";
 			productName = "pdfv-digio-ios-app";
@@ -215,6 +216,9 @@
 				Base,
 			);
 			mainGroup = EC23387D2C6FC90A00BEA0F8;
+			packageReferences = (
+				EC2338B92C6FCCCF00BEA0F8 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+			);
 			productRefGroup = EC2338872C6FC90A00BEA0F8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,6 +297,10 @@
 			isa = PBXTargetDependency;
 			target = EC2338852C6FC90A00BEA0F8 /* pdfv-digio-ios-app */;
 			targetProxy = EC2338A72C6FC90B00BEA0F8 /* PBXContainerItemProxy */;
+		};
+		EC2338BB2C6FCD5C00BEA0F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = EC2338BA2C6FCD5C00BEA0F8 /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -603,6 +611,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC2338B92C6FCCCF00BEA0F8 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.56.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC2338BA2C6FCD5C00BEA0F8 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC2338B92C6FCCCF00BEA0F8 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC23387E2C6FC90A00BEA0F8 /* Project object */;
 }
