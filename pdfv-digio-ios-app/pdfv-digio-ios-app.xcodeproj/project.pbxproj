@@ -95,8 +95,7 @@
 			children = (
 				EC2338892C6FC90A00BEA0F8 /* AppDelegate.swift */,
 				EC2338BC2C6FDEE400BEA0F8 /* Features */,
-				EC2338922C6FC90A00BEA0F8 /* Assets.xcassets */,
-				EC2338972C6FC90A00BEA0F8 /* Info.plist */,
+				EC2338C02C6FE48B00BEA0F8 /* Resources */,
 			);
 			path = "pdfv-digio-ios-app";
 			sourceTree = "<group>";
@@ -132,6 +131,15 @@
 				EC2338BE2C6FDF1B00BEA0F8 /* HomeViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		EC2338C02C6FE48B00BEA0F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC2338922C6FC90A00BEA0F8 /* Assets.xcassets */,
+				EC2338972C6FC90A00BEA0F8 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +444,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "pdfv-digio-ios-app/Info.plist";
+				INFOPLIST_FILE = "pdfv-digio-ios-app/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -462,7 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "pdfv-digio-ios-app/Info.plist";
+				INFOPLIST_FILE = "pdfv-digio-ios-app/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
