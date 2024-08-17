@@ -55,7 +55,7 @@ extension HomeHeaderView: ViewCodable {
 
         hStack
             .horizontals(to: self, constant: 24)
-            .verticals(to: self, safeArea: true)
+            .verticals(to: self, constant: 16, safeArea: true)
     }
 
     func setupCompletion() {
