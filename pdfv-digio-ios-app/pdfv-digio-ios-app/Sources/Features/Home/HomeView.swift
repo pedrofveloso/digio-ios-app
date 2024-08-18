@@ -1,47 +1,42 @@
 //
-//  HomeViewController.swift
+//  HomeView.swift
 //  pdfv-digio-ios-app
 //
-//  Created by Pedro Veloso on 16/08/24.
+//  Created by Pedro Veloso on 18/08/24.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+final class HomeView: UIView {
     private lazy var header = HomeHeaderView()
     private lazy var spotlight = HomeSpotlightCollectionView()
     private lazy var digioCash = HomeDigioCashView()
-
-    private lazy var label: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Hello world!"
-        return label
-    }()
 
     private lazy var vStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [
             header,
             spotlight,
             digioCash,
-            label
         ])
         stack.axis = .vertical
         stack.spacing = 8.0
         return stack
     }()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override init(frame: CGRect = .zero) {
+        super.init(frame: frame)
         setup()
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
-extension HomeViewController: ViewCodable {
+extension HomeView: ViewCodable {
     func setupSubviews() {
-        view.addSubview(vStack)
+        addSubview(vStack)
     }
 
     func setupConstraints() {
@@ -52,10 +47,12 @@ extension HomeViewController: ViewCodable {
             .height(132)
 
         vStack
-            .edges(to: view)
+            .top(to: self.topAnchor)
+            .horizontals(to: self)
+            .bottom(to: self.bottomAnchor, makeLessThanOrEqual: true)
     }
 
     func setupCompletion() {
-        view.backgroundColor = .white
+        backgroundColor = .white
     }
 }

@@ -19,6 +19,13 @@
 		EC2338CA2C70337200BEA0F8 /* HomeSpotlightCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338C92C70337200BEA0F8 /* HomeSpotlightCollectionView.swift */; };
 		ECB1799F2C706AAB00DABCF7 /* HomeSpotlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1799E2C706AAB00DABCF7 /* HomeSpotlightCollectionViewCell.swift */; };
 		ECB179A12C718BC500DABCF7 /* HomeDigioCashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A02C718BC500DABCF7 /* HomeDigioCashView.swift */; };
+		ECB179A32C71950600DABCF7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A22C71950600DABCF7 /* HomePresenter.swift */; };
+		ECB179A52C71B2F400DABCF7 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A42C71B2F400DABCF7 /* HomeService.swift */; };
+		ECB179A92C71B3C600DABCF7 /* HomeProductsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A82C71B3C600DABCF7 /* HomeProductsDTO.swift */; };
+		ECB179AE2C71B95B00DABCF7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179AD2C71B95A00DABCF7 /* LoadingView.swift */; };
+		ECB179B02C71B9FE00DABCF7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179AF2C71B9FE00DABCF7 /* HomeView.swift */; };
+		ECB179B72C71BDC300DABCF7 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179B62C71BDC300DABCF7 /* HomeModel.swift */; };
+		ECB179B92C71CA3200DABCF7 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179B82C71CA3200DABCF7 /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +62,13 @@
 		EC2338C92C70337200BEA0F8 /* HomeSpotlightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSpotlightCollectionView.swift; sourceTree = "<group>"; };
 		ECB1799E2C706AAB00DABCF7 /* HomeSpotlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSpotlightCollectionViewCell.swift; sourceTree = "<group>"; };
 		ECB179A02C718BC500DABCF7 /* HomeDigioCashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDigioCashView.swift; sourceTree = "<group>"; };
+		ECB179A22C71950600DABCF7 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		ECB179A42C71B2F400DABCF7 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		ECB179A82C71B3C600DABCF7 /* HomeProductsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductsDTO.swift; sourceTree = "<group>"; };
+		ECB179AD2C71B95A00DABCF7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		ECB179AF2C71B9FE00DABCF7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		ECB179B62C71BDC300DABCF7 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		ECB179B82C71CA3200DABCF7 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				EC2338892C6FC90A00BEA0F8 /* AppDelegate.swift */,
-				EC2338C12C6FE4F000BEA0F8 /* View Code Files */,
-				EC2338BC2C6FDEE400BEA0F8 /* Features */,
+				ECB179AA2C71B8C500DABCF7 /* Sources */,
 				EC2338C02C6FE48B00BEA0F8 /* Resources */,
 			);
 			path = "pdfv-digio-ios-app";
@@ -142,6 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				EC2338BE2C6FDF1B00BEA0F8 /* HomeViewController.swift */,
+				ECB179AF2C71B9FE00DABCF7 /* HomeView.swift */,
+				ECB179B62C71BDC300DABCF7 /* HomeModel.swift */,
+				ECB179A22C71950600DABCF7 /* HomePresenter.swift */,
+				ECB179A62C71B36300DABCF7 /* Service */,
 				EC2338C42C6FE7D100BEA0F8 /* Components */,
 			);
 			path = Home;
@@ -174,6 +191,58 @@
 				ECB179A02C718BC500DABCF7 /* HomeDigioCashView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		ECB179A62C71B36300DABCF7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ECB179A42C71B2F400DABCF7 /* HomeService.swift */,
+				ECB179A72C71B36C00DABCF7 /* DTOs */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		ECB179A72C71B36C00DABCF7 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				ECB179A82C71B3C600DABCF7 /* HomeProductsDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		ECB179AA2C71B8C500DABCF7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EC2338BC2C6FDEE400BEA0F8 /* Features */,
+				ECB179AC2C71B94C00DABCF7 /* Reusable Components */,
+				ECB179AB2C71B8CE00DABCF7 /* Utils */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		ECB179AB2C71B8CE00DABCF7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ECB179BA2C71CA5000DABCF7 /* Network */,
+				EC2338C12C6FE4F000BEA0F8 /* View Code Files */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ECB179AC2C71B94C00DABCF7 /* Reusable Components */ = {
+			isa = PBXGroup;
+			children = (
+				ECB179AD2C71B95A00DABCF7 /* LoadingView.swift */,
+			);
+			path = "Reusable Components";
+			sourceTree = "<group>";
+		};
+		ECB179BA2C71CA5000DABCF7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ECB179B82C71CA3200DABCF7 /* NetworkClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,11 +378,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB179A92C71B3C600DABCF7 /* HomeProductsDTO.swift in Sources */,
 				EC2338C62C6FE81700BEA0F8 /* HomeHeaderView.swift in Sources */,
+				ECB179B02C71B9FE00DABCF7 /* HomeView.swift in Sources */,
+				ECB179A32C71950600DABCF7 /* HomePresenter.swift in Sources */,
 				ECB179A12C718BC500DABCF7 /* HomeDigioCashView.swift in Sources */,
 				EC23388A2C6FC90A00BEA0F8 /* AppDelegate.swift in Sources */,
+				ECB179AE2C71B95B00DABCF7 /* LoadingView.swift in Sources */,
+				ECB179B72C71BDC300DABCF7 /* HomeModel.swift in Sources */,
+				ECB179A52C71B2F400DABCF7 /* HomeService.swift in Sources */,
 				EC2338C82C6FEADE00BEA0F8 /* UIView+Constraints.swift in Sources */,
 				ECB1799F2C706AAB00DABCF7 /* HomeSpotlightCollectionViewCell.swift in Sources */,
+				ECB179B92C71CA3200DABCF7 /* NetworkClient.swift in Sources */,
 				EC2338BF2C6FDF1B00BEA0F8 /* HomeViewController.swift in Sources */,
 				EC2338CA2C70337200BEA0F8 /* HomeSpotlightCollectionView.swift in Sources */,
 				EC2338C32C6FE52D00BEA0F8 /* ViewCodable.swift in Sources */,
