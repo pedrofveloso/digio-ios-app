@@ -54,7 +54,7 @@ extension HomeHeaderView: ViewCodable {
             .height(iconSize)
 
         hStack
-            .horizontals(to: self, constant: 24)
+            .horizontals(to: self, constant: 16)
             .verticals(to: self, constant: 16, safeArea: true)
     }
 
