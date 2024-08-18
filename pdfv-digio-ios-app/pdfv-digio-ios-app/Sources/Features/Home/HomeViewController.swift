@@ -88,6 +88,7 @@ extension HomeViewController: HomeViewControllerDelegate {
         case .loaded(let model):
             self.dismiss(animated: true)
 
+            spotlight.update(banners: model.spotlight)
             digioCash.update(banner: model.digioCash)
 
         case .error:

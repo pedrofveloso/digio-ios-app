@@ -11,6 +11,7 @@ final class HomeSpotlightCollectionViewCell: UICollectionViewCell, ViewCodable {
     private var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .white
         return imageView
     }()
 
@@ -38,7 +39,6 @@ final class HomeSpotlightCollectionViewCell: UICollectionViewCell, ViewCodable {
 
     func setupCompletion() {
         addRoundedCorners()
-
         addShadow()
     }
 

@@ -8,8 +8,9 @@
 import UIKit
 
 final class HomeSpotlightCollectionView: UICollectionView {
-
     private lazy var cellId = "\(Self.self)_cell"
+
+    private var banners = [HomeModel.Banner]()
 
     init() {
         super.init(frame: .zero, collectionViewLayout: .layout)
@@ -19,19 +20,22 @@ final class HomeSpotlightCollectionView: UICollectionView {
         dataSource = self
 
         showsHorizontalScrollIndicator = false
-
-        isHidden = true
     }
 
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
+    func update(banners: [HomeModel.Banner]) {
+        self.banners = banners
+        reloadData()
+    }
 }
 
 extension HomeSpotlightCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        0
+        banners.count
     }
 
     func collectionView(
@@ -43,7 +47,11 @@ extension HomeSpotlightCollectionView: UICollectionViewDataSource {
             return .init()
         }
 
-        cell.setImage(to: .init(resource: .rechargeBanner))
+        guard let imageUrl = banners[indexPath.row].imageURL else { return cell }
+
+        UIImage.load(from: imageUrl) { [weak cell] image in
+            cell?.setImage(to: image)
+        }
 
         return cell
     }
