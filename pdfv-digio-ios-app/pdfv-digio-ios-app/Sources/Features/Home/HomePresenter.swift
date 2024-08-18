@@ -23,16 +23,17 @@ final class HomePresenter {
     }
 
     func fetchProducts() {
+        delegate?.set(state: .loading)
         do {
             try service.fetchProducts { [weak self] result in
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let products):
                         self?.model = products
-                        self?.delegate?.didFetchProducts()
+                        self?.delegate?.set(state: .loaded)
 
                     case .failure(let failure):
-                        print("failed")
+                        self?.delegate?.set(state: .error(failure.localizedDescription))
                     }
                 }
 

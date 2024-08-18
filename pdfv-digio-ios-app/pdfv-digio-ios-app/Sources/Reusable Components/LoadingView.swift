@@ -7,16 +7,18 @@
 
 import UIKit
 
-final class LoadingView: UIView {
+final class LoadingViewController: UIViewController {
 
     lazy var spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView()
-        spinner.color = .blue
+        spinner.backgroundColor = .white
         return spinner
     }()
 
-    override init(frame: CGRect = .zero) {
-        super.init(frame: frame)
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nil, bundle: nil)
+        modalPresentationStyle = .overCurrentContext
+        modalTransitionStyle = .crossDissolve
         setup()
     }
 
@@ -26,20 +28,24 @@ final class LoadingView: UIView {
     }
 }
 
-extension LoadingView: ViewCodable {
+extension LoadingViewController: ViewCodable {
 
     func setupSubviews() {
-        addSubview(spinner)
+        view.addSubview(spinner)
     }
 
     func setupConstraints() {
         spinner
-            .centerX(to: self.centerXAnchor)
-            .centerY(to: self.centerYAnchor)
+            .centerX(to: view.centerXAnchor)
+            .centerY(to: view.centerYAnchor)
+            .width(50)
+            .height(50)
     }
 
     func setupCompletion() {
-        backgroundColor = .white
+        view.backgroundColor = .black.withAlphaComponent(0.15)
+        spinner.layer.cornerRadius = 25
+        spinner.layer.masksToBounds = true
         spinner.startAnimating()
     }
 }

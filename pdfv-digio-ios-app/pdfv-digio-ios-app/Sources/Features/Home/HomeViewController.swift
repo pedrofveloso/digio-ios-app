@@ -8,10 +8,31 @@
 import UIKit
 
 protocol HomeViewControllerDelegate: AnyObject {
-    func didFetchProducts()
+    func set(state: HomeViewController.State)
 }
 
 final class HomeViewController: UIViewController {
+    enum State {
+        case loading
+        case loaded
+        case error(_ message: String)
+    }
+
+    private lazy var header = HomeHeaderView()
+    private lazy var spotlight = HomeSpotlightCollectionView()
+    private lazy var digioCash = HomeDigioCashView()
+
+    private lazy var vStack: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [
+            header,
+            spotlight,
+            digioCash
+        ])
+        stack.axis = .vertical
+        stack.spacing = 8.0
+        return stack
+    }()
+
     private let presenter = HomePresenter()
 
     init() {
@@ -24,26 +45,60 @@ final class HomeViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func loadView() {
-        view = LoadingView()
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
+    }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         presenter.fetchProducts()
     }
 }
 
-extension HomeViewController: HomeViewControllerDelegate {
-    func didFetchProducts() {
-        UIView.transition(
-            from: self.view,
-            to: HomeView(frame: self.view.frame),
-            duration: 0.5,
-            options: [.transitionCrossDissolve]
-        )
+extension HomeViewController: ViewCodable {
+    func setupSubviews() {
+        view.addSubview(vStack)
+    }
 
-        print(presenter.model)
+    func setupConstraints() {
+        spotlight
+            .height(200)
+
+        digioCash
+            .height(132)
+
+        vStack
+            .top(to: view.topAnchor)
+            .horizontals(to: view)
+            .bottom(to: view.bottomAnchor, makeLessThanOrEqual: true)
+    }
+
+    func setupCompletion() {
+        view.backgroundColor = .white
+    }
+}
+
+extension HomeViewController: HomeViewControllerDelegate {
+    func set(state: State) {
+        switch state {
+        case .loading:
+            self.showLoading()
+
+        case .loaded:
+            self.dismiss(animated: true)
+            // TODO: update components
+
+        case .error:
+            break
+            // TODO: Show error message
+
+        }
+    }
+}
+
+extension UIViewController {
+    func showLoading() {
+        self.present(LoadingViewController(), animated: true)
     }
 }

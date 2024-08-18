@@ -23,7 +23,6 @@
 		ECB179A52C71B2F400DABCF7 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A42C71B2F400DABCF7 /* HomeService.swift */; };
 		ECB179A92C71B3C600DABCF7 /* HomeProductsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A82C71B3C600DABCF7 /* HomeProductsDTO.swift */; };
 		ECB179AE2C71B95B00DABCF7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179AD2C71B95A00DABCF7 /* LoadingView.swift */; };
-		ECB179B02C71B9FE00DABCF7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179AF2C71B9FE00DABCF7 /* HomeView.swift */; };
 		ECB179B72C71BDC300DABCF7 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179B62C71BDC300DABCF7 /* HomeModel.swift */; };
 		ECB179B92C71CA3200DABCF7 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179B82C71CA3200DABCF7 /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
@@ -66,7 +65,6 @@
 		ECB179A42C71B2F400DABCF7 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		ECB179A82C71B3C600DABCF7 /* HomeProductsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductsDTO.swift; sourceTree = "<group>"; };
 		ECB179AD2C71B95A00DABCF7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
-		ECB179AF2C71B9FE00DABCF7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		ECB179B62C71BDC300DABCF7 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		ECB179B82C71CA3200DABCF7 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				EC2338BE2C6FDF1B00BEA0F8 /* HomeViewController.swift */,
-				ECB179AF2C71B9FE00DABCF7 /* HomeView.swift */,
 				ECB179B62C71BDC300DABCF7 /* HomeModel.swift */,
 				ECB179A22C71950600DABCF7 /* HomePresenter.swift */,
 				ECB179A62C71B36300DABCF7 /* Service */,
@@ -380,7 +377,6 @@
 			files = (
 				ECB179A92C71B3C600DABCF7 /* HomeProductsDTO.swift in Sources */,
 				EC2338C62C6FE81700BEA0F8 /* HomeHeaderView.swift in Sources */,
-				ECB179B02C71B9FE00DABCF7 /* HomeView.swift in Sources */,
 				ECB179A32C71950600DABCF7 /* HomePresenter.swift in Sources */,
 				ECB179A12C718BC500DABCF7 /* HomeDigioCashView.swift in Sources */,
 				EC23388A2C6FC90A00BEA0F8 /* AppDelegate.swift in Sources */,
