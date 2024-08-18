@@ -19,17 +19,19 @@ final class HomeViewController: UIViewController {
     }
 
     private lazy var header = HomeHeaderView()
-    private lazy var spotlight = HomeSpotlightCollectionView()
+    private lazy var spotlight = HomeCollectionView<HomeSpotlightCell>(layout: .homeSpotlight)
     private lazy var digioCash = HomeDigioCashView()
+    private lazy var products = HomeProductsView()
 
     private lazy var vStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [
             header,
             spotlight,
-            digioCash
+            digioCash,
+            products
         ])
         stack.axis = .vertical
-        stack.spacing = 8.0
+        stack.spacing = 24
         return stack
     }()
 
@@ -63,10 +65,13 @@ extension HomeViewController: ViewCodable {
 
     func setupConstraints() {
         spotlight
-            .height(200)
+            .height(176)
 
         digioCash
-            .height(132)
+            .height(136)
+
+        products
+            .height(142)
 
         vStack
             .top(to: view.topAnchor)
@@ -90,6 +95,7 @@ extension HomeViewController: HomeViewControllerDelegate {
 
             spotlight.update(banners: model.spotlight)
             digioCash.update(banner: model.digioCash)
+            products.update(banners: model.products)
 
         case .error:
             break

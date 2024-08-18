@@ -16,8 +16,8 @@
 		EC2338C32C6FE52D00BEA0F8 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338C22C6FE52D00BEA0F8 /* ViewCodable.swift */; };
 		EC2338C62C6FE81700BEA0F8 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338C52C6FE81700BEA0F8 /* HomeHeaderView.swift */; };
 		EC2338C82C6FEADE00BEA0F8 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338C72C6FEADE00BEA0F8 /* UIView+Constraints.swift */; };
-		EC2338CA2C70337200BEA0F8 /* HomeSpotlightCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2338C92C70337200BEA0F8 /* HomeSpotlightCollectionView.swift */; };
-		ECB1799F2C706AAB00DABCF7 /* HomeSpotlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1799E2C706AAB00DABCF7 /* HomeSpotlightCollectionViewCell.swift */; };
+		EC90ADD82C72AFFF00B3E728 /* HomeProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90ADD72C72AFFF00B3E728 /* HomeProductsView.swift */; };
+		ECB1799F2C706AAB00DABCF7 /* HomeSpotlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1799E2C706AAB00DABCF7 /* HomeSpotlightCell.swift */; };
 		ECB179A12C718BC500DABCF7 /* HomeDigioCashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A02C718BC500DABCF7 /* HomeDigioCashView.swift */; };
 		ECB179A32C71950600DABCF7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A22C71950600DABCF7 /* HomePresenter.swift */; };
 		ECB179A52C71B2F400DABCF7 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A42C71B2F400DABCF7 /* HomeService.swift */; };
@@ -26,6 +26,9 @@
 		ECB179B72C71BDC300DABCF7 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179B62C71BDC300DABCF7 /* HomeModel.swift */; };
 		ECB179B92C71CA3200DABCF7 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179B82C71CA3200DABCF7 /* NetworkClient.swift */; };
 		ECB179BD2C7294C800DABCF7 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179BC2C7294C800DABCF7 /* UIImage+.swift */; };
+		ECB179BF2C7299FE00DABCF7 /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179BE2C7299FE00DABCF7 /* HomeCollectionView.swift */; };
+		ECB179C22C729DCA00DABCF7 /* HomeProductsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179C12C729DCA00DABCF7 /* HomeProductsCell.swift */; };
+		ECB179C42C72A97D00DABCF7 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179C32C72A97D00DABCF7 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +62,8 @@
 		EC2338C22C6FE52D00BEA0F8 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		EC2338C52C6FE81700BEA0F8 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		EC2338C72C6FEADE00BEA0F8 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
-		EC2338C92C70337200BEA0F8 /* HomeSpotlightCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSpotlightCollectionView.swift; sourceTree = "<group>"; };
-		ECB1799E2C706AAB00DABCF7 /* HomeSpotlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSpotlightCollectionViewCell.swift; sourceTree = "<group>"; };
+		EC90ADD72C72AFFF00B3E728 /* HomeProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductsView.swift; sourceTree = "<group>"; };
+		ECB1799E2C706AAB00DABCF7 /* HomeSpotlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSpotlightCell.swift; sourceTree = "<group>"; };
 		ECB179A02C718BC500DABCF7 /* HomeDigioCashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDigioCashView.swift; sourceTree = "<group>"; };
 		ECB179A22C71950600DABCF7 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		ECB179A42C71B2F400DABCF7 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
@@ -69,6 +72,9 @@
 		ECB179B62C71BDC300DABCF7 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		ECB179B82C71CA3200DABCF7 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		ECB179BC2C7294C800DABCF7 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		ECB179BE2C7299FE00DABCF7 /* HomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
+		ECB179C12C729DCA00DABCF7 /* HomeProductsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductsCell.swift; sourceTree = "<group>"; };
+		ECB179C32C72A97D00DABCF7 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,10 +190,11 @@
 		EC2338C42C6FE7D100BEA0F8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				EC2338C52C6FE81700BEA0F8 /* HomeHeaderView.swift */,
-				EC2338C92C70337200BEA0F8 /* HomeSpotlightCollectionView.swift */,
-				ECB1799E2C706AAB00DABCF7 /* HomeSpotlightCollectionViewCell.swift */,
+				ECB179BE2C7299FE00DABCF7 /* HomeCollectionView.swift */,
 				ECB179A02C718BC500DABCF7 /* HomeDigioCashView.swift */,
+				EC2338C52C6FE81700BEA0F8 /* HomeHeaderView.swift */,
+				EC90ADD72C72AFFF00B3E728 /* HomeProductsView.swift */,
+				ECB179C02C729D9200DABCF7 /* Cells */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -249,8 +256,18 @@
 			isa = PBXGroup;
 			children = (
 				ECB179BC2C7294C800DABCF7 /* UIImage+.swift */,
+				ECB179C32C72A97D00DABCF7 /* UIView+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ECB179C02C729D9200DABCF7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ECB1799E2C706AAB00DABCF7 /* HomeSpotlightCell.swift */,
+				ECB179C12C729DCA00DABCF7 /* HomeProductsCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,17 +406,20 @@
 				ECB179A92C71B3C600DABCF7 /* HomeProductsDTO.swift in Sources */,
 				EC2338C62C6FE81700BEA0F8 /* HomeHeaderView.swift in Sources */,
 				ECB179A32C71950600DABCF7 /* HomePresenter.swift in Sources */,
+				EC90ADD82C72AFFF00B3E728 /* HomeProductsView.swift in Sources */,
+				ECB179C22C729DCA00DABCF7 /* HomeProductsCell.swift in Sources */,
+				ECB179BF2C7299FE00DABCF7 /* HomeCollectionView.swift in Sources */,
 				ECB179A12C718BC500DABCF7 /* HomeDigioCashView.swift in Sources */,
 				EC23388A2C6FC90A00BEA0F8 /* AppDelegate.swift in Sources */,
 				ECB179AE2C71B95B00DABCF7 /* LoadingViewController.swift in Sources */,
 				ECB179B72C71BDC300DABCF7 /* HomeModel.swift in Sources */,
+				ECB179C42C72A97D00DABCF7 /* UIView+.swift in Sources */,
 				ECB179A52C71B2F400DABCF7 /* HomeService.swift in Sources */,
 				EC2338C82C6FEADE00BEA0F8 /* UIView+Constraints.swift in Sources */,
-				ECB1799F2C706AAB00DABCF7 /* HomeSpotlightCollectionViewCell.swift in Sources */,
+				ECB1799F2C706AAB00DABCF7 /* HomeSpotlightCell.swift in Sources */,
 				ECB179B92C71CA3200DABCF7 /* NetworkClient.swift in Sources */,
 				EC2338BF2C6FDF1B00BEA0F8 /* HomeViewController.swift in Sources */,
 				ECB179BD2C7294C800DABCF7 /* UIImage+.swift in Sources */,
-				EC2338CA2C70337200BEA0F8 /* HomeSpotlightCollectionView.swift in Sources */,
 				EC2338C32C6FE52D00BEA0F8 /* ViewCodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

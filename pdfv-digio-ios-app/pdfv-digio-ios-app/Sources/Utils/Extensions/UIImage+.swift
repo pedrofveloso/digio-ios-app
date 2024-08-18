@@ -11,13 +11,11 @@ extension UIImage {
     static func load(from url: URL, completion: @escaping (_ image: UIImage) -> Void ) {
         DispatchQueue.global(qos: .userInteractive).async {
             guard let data = try? Data(contentsOf: url) else {
-                completion(.init())
+                completion(.init(resource: .error))
                 return
             }
 
-            DispatchQueue.main.async {
-                completion(.init(data: data) ?? .init())
-            }
+            completion(.init(data: data) ?? .init(resource: .error))
         }
     }
 }

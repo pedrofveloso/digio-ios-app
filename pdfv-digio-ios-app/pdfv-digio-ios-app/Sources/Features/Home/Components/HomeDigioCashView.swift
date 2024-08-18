@@ -27,7 +27,8 @@ class HomeDigioCashView: UIView {
     private lazy var vStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [title, imageView])
         stack.axis = .vertical
-        stack.spacing = 8
+        stack.spacing = 16
+        stack.distribution = .fillProportionally
         return stack
     }()
 
@@ -49,7 +50,9 @@ class HomeDigioCashView: UIView {
         guard let imageURL = banner.imageURL else { return }
 
         UIImage.load(from: imageURL) { [weak self] image in
-            self?.imageView.image = image
+            DispatchQueue.main.async {
+                self?.imageView.image = image
+            }
         }
     }
 }
