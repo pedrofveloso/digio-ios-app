@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
 
     private lazy var header = HomeHeaderView()
     private lazy var spotlight = HomeSpotlightCollectionView()
+    private lazy var digioCash = HomeDigioCashView()
 
     private lazy var label: UILabel = {
         let label = UILabel()
@@ -20,7 +21,12 @@ class HomeViewController: UIViewController {
     }()
 
     private lazy var vStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [header, spotlight, label])
+        let stack = UIStackView(arrangedSubviews: [
+            header,
+            spotlight,
+            digioCash,
+            label
+        ])
         stack.axis = .vertical
         stack.spacing = 8.0
         return stack
@@ -41,6 +47,9 @@ extension HomeViewController: ViewCodable {
     func setupConstraints() {
         spotlight
             .height(200)
+
+        digioCash
+            .height(132)
 
         vStack
             .edges(to: view)
