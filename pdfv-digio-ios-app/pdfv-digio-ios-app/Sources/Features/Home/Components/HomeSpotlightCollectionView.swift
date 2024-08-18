@@ -19,6 +19,8 @@ final class HomeSpotlightCollectionView: UICollectionView {
         dataSource = self
 
         showsHorizontalScrollIndicator = false
+
+        isHidden = true
     }
 
     @available(*, unavailable)
@@ -29,7 +31,7 @@ final class HomeSpotlightCollectionView: UICollectionView {
 
 extension HomeSpotlightCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        4
+        0
     }
 
     func collectionView(

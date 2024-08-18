@@ -14,7 +14,7 @@ protocol HomeViewControllerDelegate: AnyObject {
 final class HomeViewController: UIViewController {
     enum State {
         case loading
-        case loaded
+        case loaded(_ model: HomeModel)
         case error(_ message: String)
     }
 
@@ -85,9 +85,10 @@ extension HomeViewController: HomeViewControllerDelegate {
         case .loading:
             self.showLoading()
 
-        case .loaded:
+        case .loaded(let model):
             self.dismiss(animated: true)
-            // TODO: update components
+
+            digioCash.update(banner: model.digioCash)
 
         case .error:
             break

@@ -1,5 +1,5 @@
 //
-//  LoadingView.swift
+//  LoadingViewController.swift
 //  pdfv-digio-ios-app
 //
 //  Created by Pedro Veloso on 18/08/24.

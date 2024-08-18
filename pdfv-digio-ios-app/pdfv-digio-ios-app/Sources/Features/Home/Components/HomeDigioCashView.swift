@@ -12,14 +12,15 @@ class HomeDigioCashView: UIView {
     private lazy var title: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .headline)
-        label.text = "digio Cash"
         label.setContentCompressionResistancePriority(.required, for: .vertical)
         return label
     }()
 
     private lazy var imageView: UIImageView = {
-        let imageView = UIImageView(image: .cashBanner)
+        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 8
+        imageView.layer.masksToBounds = true
         return imageView
     }()
 
@@ -40,18 +41,27 @@ class HomeDigioCashView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setupTitleStyle() {
+    func update(banner: HomeModel.Banner) {
+        title.text = banner.name
+
+        setupTitleStyle()
+
+        guard let imageURL = banner.imageURL else { return }
+
+        UIImage.load(from: imageURL) { [weak self] image in
+            self?.imageView.image = image
+        }
+    }
+}
+
+private extension HomeDigioCashView {
+    func setupTitleStyle() {
         guard let text = title.text else { return }
         let range = (text as NSString).range(of: "Cash")
         let attributedString = NSMutableAttributedString(string: text)
 
         attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.gray, range: range)
         title.attributedText = attributedString
-    }
-
-    private func setupImageViewStyle() {
-        imageView.layer.cornerRadius = 8
-        imageView.layer.masksToBounds = true
     }
 }
 
@@ -64,10 +74,5 @@ extension HomeDigioCashView: ViewCodable {
         vStack
             .horizontals(to: self, constant: 16)
             .verticals(to: self)
-    }
-
-    func setupCompletion() {
-        setupTitleStyle()
-        setupImageViewStyle()
     }
 }

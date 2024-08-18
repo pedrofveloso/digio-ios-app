@@ -21,7 +21,7 @@ final class HomeHeaderView: UIView {
     private lazy var label: UILabel = {
         let label = UILabel()
         label.text = "Olá, Maria"
-        label.font = .preferredFont(forTextStyle: .headline)
+        label.font = .preferredFont(forTextStyle: .callout)
         return label
     }()
 

@@ -22,9 +22,10 @@
 		ECB179A32C71950600DABCF7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A22C71950600DABCF7 /* HomePresenter.swift */; };
 		ECB179A52C71B2F400DABCF7 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A42C71B2F400DABCF7 /* HomeService.swift */; };
 		ECB179A92C71B3C600DABCF7 /* HomeProductsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A82C71B3C600DABCF7 /* HomeProductsDTO.swift */; };
-		ECB179AE2C71B95B00DABCF7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179AD2C71B95A00DABCF7 /* LoadingView.swift */; };
+		ECB179AE2C71B95B00DABCF7 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179AD2C71B95A00DABCF7 /* LoadingViewController.swift */; };
 		ECB179B72C71BDC300DABCF7 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179B62C71BDC300DABCF7 /* HomeModel.swift */; };
 		ECB179B92C71CA3200DABCF7 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179B82C71CA3200DABCF7 /* NetworkClient.swift */; };
+		ECB179BD2C7294C800DABCF7 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179BC2C7294C800DABCF7 /* UIImage+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +65,10 @@
 		ECB179A22C71950600DABCF7 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		ECB179A42C71B2F400DABCF7 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		ECB179A82C71B3C600DABCF7 /* HomeProductsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductsDTO.swift; sourceTree = "<group>"; };
-		ECB179AD2C71B95A00DABCF7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		ECB179AD2C71B95A00DABCF7 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		ECB179B62C71BDC300DABCF7 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		ECB179B82C71CA3200DABCF7 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		ECB179BC2C7294C800DABCF7 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 		ECB179AB2C71B8CE00DABCF7 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				ECB179BB2C7294BA00DABCF7 /* Extensions */,
 				ECB179BA2C71CA5000DABCF7 /* Network */,
 				EC2338C12C6FE4F000BEA0F8 /* View Code Files */,
 			);
@@ -229,7 +232,7 @@
 		ECB179AC2C71B94C00DABCF7 /* Reusable Components */ = {
 			isa = PBXGroup;
 			children = (
-				ECB179AD2C71B95A00DABCF7 /* LoadingView.swift */,
+				ECB179AD2C71B95A00DABCF7 /* LoadingViewController.swift */,
 			);
 			path = "Reusable Components";
 			sourceTree = "<group>";
@@ -240,6 +243,14 @@
 				ECB179B82C71CA3200DABCF7 /* NetworkClient.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		ECB179BB2C7294BA00DABCF7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ECB179BC2C7294C800DABCF7 /* UIImage+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,13 +391,14 @@
 				ECB179A32C71950600DABCF7 /* HomePresenter.swift in Sources */,
 				ECB179A12C718BC500DABCF7 /* HomeDigioCashView.swift in Sources */,
 				EC23388A2C6FC90A00BEA0F8 /* AppDelegate.swift in Sources */,
-				ECB179AE2C71B95B00DABCF7 /* LoadingView.swift in Sources */,
+				ECB179AE2C71B95B00DABCF7 /* LoadingViewController.swift in Sources */,
 				ECB179B72C71BDC300DABCF7 /* HomeModel.swift in Sources */,
 				ECB179A52C71B2F400DABCF7 /* HomeService.swift in Sources */,
 				EC2338C82C6FEADE00BEA0F8 /* UIView+Constraints.swift in Sources */,
 				ECB1799F2C706AAB00DABCF7 /* HomeSpotlightCollectionViewCell.swift in Sources */,
 				ECB179B92C71CA3200DABCF7 /* NetworkClient.swift in Sources */,
 				EC2338BF2C6FDF1B00BEA0F8 /* HomeViewController.swift in Sources */,
+				ECB179BD2C7294C800DABCF7 /* UIImage+.swift in Sources */,
 				EC2338CA2C70337200BEA0F8 /* HomeSpotlightCollectionView.swift in Sources */,
 				EC2338C32C6FE52D00BEA0F8 /* ViewCodable.swift in Sources */,
 			);
