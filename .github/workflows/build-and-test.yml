@@ -24,7 +24,7 @@ jobs:
 
       - name: Build and Test Project
         run: |
-          /usr/bin/xcodebuild test \
+          /usr/bin/pdfv-digio-ios-app/xcodebuild test \
             -scheme "$XC_SCHEME" \
             -testPlan  $XC_TESTPLAN \
             -destination "$XC_DESTINATION" \
