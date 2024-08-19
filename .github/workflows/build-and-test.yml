@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: macos-14
     name: Build and Test
-    timeout-minutes: 5
+    timeout-minutes: 10
     env:
       XC_SCHEME: 'pdfv-digio-ios-app'
       XC_PROJ: 'pdfv-digio-ios-app.xcodeproj'
