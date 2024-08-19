@@ -13,6 +13,7 @@ class HomeDigioCashView: UIView {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .headline)
         label.setContentCompressionResistancePriority(.required, for: .vertical)
+        label.textColor = .primary
         return label
     }()
 
