@@ -19,7 +19,7 @@ final class HomeViewController: UIViewController {
     }
 
     private lazy var header = HomeHeaderView()
-    private lazy var spotlight = HomeCollectionView<HomeSpotlightCell>(layout: .homeSpotlight)
+    private lazy var spotlight = HomeCollectionView<HomeSpotlightCell>(layout: .homeSpotlight, parent: self)
     private lazy var digioCash = HomeDigioCashView()
     private lazy var products = HomeProductsView()
 
@@ -88,10 +88,10 @@ extension HomeViewController: HomeViewControllerDelegate {
     func set(state: State) {
         switch state {
         case .loading:
-            self.showLoading()
+            present(LoadingViewController(), animated: true)
 
         case .loaded(let model):
-            self.dismiss(animated: true)
+            dismiss(animated: true)
 
             spotlight.update(banners: model.spotlight)
             digioCash.update(banner: model.digioCash)
@@ -100,13 +100,6 @@ extension HomeViewController: HomeViewControllerDelegate {
         case .error:
             break
             // TODO: Show error message
-
         }
-    }
-}
-
-extension UIViewController {
-    func showLoading() {
-        self.present(LoadingViewController(), animated: true)
     }
 }

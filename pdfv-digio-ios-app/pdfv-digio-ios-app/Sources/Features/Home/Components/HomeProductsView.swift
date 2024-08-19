@@ -15,7 +15,7 @@ final class HomeProductsView: UIView {
         return label
     }()
 
-    private lazy var products = HomeCollectionView<HomeProductsCell>(layout: .homeProducts)
+    private lazy var products = HomeCollectionView<HomeProductsCell>(layout: .homeProducts, parent: UIViewController())
 
     private lazy var vStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [title, products])

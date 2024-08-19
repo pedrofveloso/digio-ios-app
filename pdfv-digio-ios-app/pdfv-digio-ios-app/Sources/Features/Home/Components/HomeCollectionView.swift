@@ -7,18 +7,20 @@
 
 import UIKit
 
-final class HomeCollectionView<T: UICollectionViewCell>: UICollectionView, UICollectionViewDataSource {
+final class HomeCollectionView<T: UICollectionViewCell>: UICollectionView, UICollectionViewDataSource, UICollectionViewDelegate {
 
     private var banners = [HomeModel.Banner]()
 
-    init(layout: UICollectionViewFlowLayout) {
+    private weak var parent: UIViewController?
+
+    init(layout: UICollectionViewFlowLayout, parent: UIViewController) {
+        self.parent = parent
 
         super.init(frame: .zero, collectionViewLayout: layout)
 
         register(T.self, forCellWithReuseIdentifier: "\(T.self)")
-
         dataSource = self
-
+        delegate = self
         showsHorizontalScrollIndicator = false
     }
 
@@ -31,6 +33,8 @@ final class HomeCollectionView<T: UICollectionViewCell>: UICollectionView, UICol
         self.banners = banners
         reloadData()
     }
+
+    // MARK: - UICollectionViewDataSource
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         banners.count
@@ -49,6 +53,13 @@ final class HomeCollectionView<T: UICollectionViewCell>: UICollectionView, UICol
         banner.downloadImage(from: imageUrl)
 
         return cell
+    }
+
+    // MARK: - UICollectionViewDelegate methods
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let banner = banners[indexPath.row]
+        parent?.present(DetailViewController(banner: banner), animated: true)
     }
 }
 
