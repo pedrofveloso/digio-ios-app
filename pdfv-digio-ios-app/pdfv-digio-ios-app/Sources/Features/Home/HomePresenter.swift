@@ -12,7 +12,7 @@ final class HomePresenter {
 
     private weak var delegate: HomeViewControllerDelegate?
 
-    init(service: HomeServiceable = HomeService()) {
+    init(service: HomeServiceable) {
         self.service = service
     }
 
@@ -21,7 +21,6 @@ final class HomePresenter {
     }
 
     func fetchProducts() {
-        delegate?.set(state: .loading)
         do {
             try service.fetchProducts { [weak self] result in
                 DispatchQueue.main.async {

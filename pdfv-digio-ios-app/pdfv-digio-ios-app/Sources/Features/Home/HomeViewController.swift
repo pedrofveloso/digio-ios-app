@@ -37,7 +37,7 @@ final class HomeViewController: UIViewController {
         return stack
     }()
 
-    private let presenter = HomePresenter()
+    private let presenter = HomePresenter(service: HomeService())
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -56,6 +56,7 @@ final class HomeViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        set(state: .loading)
         presenter.fetchProducts()
     }
 
