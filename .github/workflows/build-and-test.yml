@@ -10,6 +10,7 @@ jobs:
     timeout-minutes: 5
     env:
       XC_SCHEME: 'pdfv-digio-ios-app'
+      XC_PROJ: 'pdfv-digio-ios-app.xcodeproj'
       XC_DESTINATION: 'platform=iOS Simulator,name=iPhone 15 Pro'
       XC_TESTPLAN: 'UnitTestsPlan'
 
@@ -26,6 +27,7 @@ jobs:
         working-directory: './pdfv-digio-ios-app'
         run: |
           /usr/bin/xcodebuild test \
+            -project "$XC_PROJ" \
             -scheme "$XC_SCHEME" \
             -testPlan  $XC_TESTPLAN \
             -destination "$XC_DESTINATION" \
