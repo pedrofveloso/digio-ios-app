@@ -120,7 +120,6 @@
 		EC23387D2C6FC90A00BEA0F8 = {
 			isa = PBXGroup;
 			children = (
-				EC23D6962C7324C500AB15D1 /* UnitTestsPlan.xctestplan */,
 				EC2338882C6FC90A00BEA0F8 /* pdfv-digio-ios-app */,
 				EC23389F2C6FC90B00BEA0F8 /* pdfv-digio-ios-appTests */,
 				EC2338A92C6FC90B00BEA0F8 /* pdfv-digio-ios-appUITests */,
@@ -190,6 +189,7 @@
 		EC2338C02C6FE48B00BEA0F8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EC23D6962C7324C500AB15D1 /* UnitTestsPlan.xctestplan */,
 				EC2338922C6FC90A00BEA0F8 /* Assets.xcassets */,
 				EC2338972C6FC90A00BEA0F8 /* Info.plist */,
 			);

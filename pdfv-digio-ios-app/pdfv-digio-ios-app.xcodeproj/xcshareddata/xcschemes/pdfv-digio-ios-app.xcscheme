@@ -28,7 +28,7 @@
             buildForArchiving = "NO"
             buildForAnalyzing = "NO">
             <TestPlanReference
-               reference = "container:UnitTestsPlan.xctestplan">
+               reference = "container:pdfv-digio-ios-app/Resources/UnitTestsPlan.xctestplan">
             </TestPlanReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -54,7 +54,7 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:UnitTestsPlan.xctestplan"
+            reference = "container:pdfv-digio-ios-app/Resources/UnitTestsPlan.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>

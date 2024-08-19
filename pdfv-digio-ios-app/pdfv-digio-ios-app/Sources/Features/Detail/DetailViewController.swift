@@ -9,12 +9,6 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    private lazy var closeButton: UIButton = {
-        let button = UIButton()
-        button.setImage(.xmark, for: .normal)
-        return button
-    }()
-
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
