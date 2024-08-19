@@ -1,0 +1,56 @@
+name: Build & Test
+
+on:
+  workflow_call:
+    inputs:
+      XC_TESTPLAN:
+        description: 'Which testplan should be used'
+        required: false
+        default: "UnitTests"
+        type: string
+  workflow_dispatch:
+    inputs:
+      XC_TESTPLAN:
+        description: 'Which testplan should be used'
+        required: false
+        default: UnitTests
+        type: choice
+        options:
+          - UnitTests
+          - UITests
+
+jobs:
+  build:
+    runs-on: macos-14
+    name: Build and Test
+    timeout-minutes: 5
+    env:
+      XC_SCHEME: 'pdfv-digio-ios-app'
+      XC_DESTINATION: 'platform=iOS Simulator,name=iPhone 15 Pro'
+      XC_TESTPLAN: 'UnitTestsPlan'
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Set Xcode Version
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Build and Test Project
+        run: |
+          /usr/bin/xcodebuild test \
+            -scheme "$XC_SCHEME" \
+            -testPlan  $XC_TESTPLAN \
+            -destination "$XC_DESTINATION" \
+            -resultBundlePath TestResults-${{ github.run_number }} \
+            -skipPackagePluginValidation
+
+      - name: Display & Upload Test Results
+        uses: kishikawakatsumi/xcresulttool@v1
+        if: failure()
+        with:
+          path: TestResults-${{ github.run_number }}.xcresult
+          show-passed-tests: false
+          show-code-coverage: false

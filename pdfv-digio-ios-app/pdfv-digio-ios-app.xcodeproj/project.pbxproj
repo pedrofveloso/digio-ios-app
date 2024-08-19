@@ -68,6 +68,7 @@
 		EC2338C22C6FE52D00BEA0F8 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		EC2338C52C6FE81700BEA0F8 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		EC2338C72C6FEADE00BEA0F8 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		EC23D6962C7324C500AB15D1 /* UnitTestsPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTestsPlan.xctestplan; sourceTree = "<group>"; };
 		EC90ADD72C72AFFF00B3E728 /* HomeProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductsView.swift; sourceTree = "<group>"; };
 		EC90ADDA2C72D65100B3E728 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EC90ADDC2C73000A00B3E728 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 		EC23387D2C6FC90A00BEA0F8 = {
 			isa = PBXGroup;
 			children = (
+				EC23D6962C7324C500AB15D1 /* UnitTestsPlan.xctestplan */,
 				EC2338882C6FC90A00BEA0F8 /* pdfv-digio-ios-app */,
 				EC23389F2C6FC90B00BEA0F8 /* pdfv-digio-ios-appTests */,
 				EC2338A92C6FC90B00BEA0F8 /* pdfv-digio-ios-appUITests */,

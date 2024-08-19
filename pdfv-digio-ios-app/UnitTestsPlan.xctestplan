@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "559ED313-22E3-4D84-8CC7-FE564E2F1905",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:pdfv-digio-ios-app.xcodeproj",
+        "identifier" : "EC23389B2C6FC90B00BEA0F8",
+        "name" : "pdfv-digio-ios-appTests"
+      }
+    }
+  ],
+  "version" : 1
+}
