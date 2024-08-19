@@ -1,23 +1,7 @@
 name: Build & Test
 
 on:
-  workflow_call:
-    inputs:
-      XC_TESTPLAN:
-        description: 'Which testplan should be used'
-        required: false
-        default: "UnitTests"
-        type: string
-  workflow_dispatch:
-    inputs:
-      XC_TESTPLAN:
-        description: 'Which testplan should be used'
-        required: false
-        default: UnitTests
-        type: choice
-        options:
-          - UnitTests
-          - UITests
+  push
 
 jobs:
   build:
