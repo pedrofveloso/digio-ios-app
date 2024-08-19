@@ -29,16 +29,15 @@ class HomeDigioCashView: UIView {
         let stack = UIStackView(arrangedSubviews: [title, imageView])
         stack.axis = .vertical
         stack.spacing = 16
-        stack.distribution = .fillProportionally
         return stack
     }()
 
-    private let action: (HomeModel.Banner) -> Void
+    private let action: BannerAction
     private var banner: HomeModel.Banner?
 
     init(
         frame: CGRect = .zero,
-        action: @escaping (HomeModel.Banner) -> Void
+        action: @escaping BannerAction
     ) {
         self.action = action
         super.init(frame: frame)
@@ -59,11 +58,7 @@ class HomeDigioCashView: UIView {
 
         guard let imageURL = banner.imageURL else { return }
 
-        UIImage.load(from: imageURL) { [weak self] image in
-            DispatchQueue.main.async {
-                self?.imageView.image = image
-            }
-        }
+        imageView.loadImage(from: imageURL)
     }
 }
 
@@ -86,6 +81,16 @@ private extension HomeDigioCashView {
     @objc func executeAction() {
         guard let banner else { return }
         action(banner)
+    }
+
+    func determineImageViewHeight(for image: UIImage) {
+        layoutIfNeeded()
+        let aspectRatio = image.size.width / image.size.height
+        let idealHeight = imageView.frame.width / aspectRatio
+
+        if idealHeight <= image.size.width {
+            imageView.height(idealHeight)
+        }
     }
 }
 

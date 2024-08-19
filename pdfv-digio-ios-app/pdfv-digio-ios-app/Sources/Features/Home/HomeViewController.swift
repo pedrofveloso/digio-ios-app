@@ -11,6 +11,8 @@ protocol HomeViewControllerDelegate: AnyObject {
     func set(state: HomeViewController.State)
 }
 
+typealias BannerAction = (HomeModel.Banner) -> Void
+
 final class HomeViewController: UIViewController {
     enum State {
         case loading
@@ -19,9 +21,9 @@ final class HomeViewController: UIViewController {
     }
 
     private lazy var header = HomeHeaderView()
-    private lazy var spotlight = HomeCollectionView<HomeSpotlightCell>(layout: .homeSpotlight, parent: self)
+    private lazy var spotlight = HomeCollectionView<HomeSpotlightCell>(layout: .homeSpotlight, action: openDetails)
     private lazy var digioCash = HomeDigioCashView(action: openDetails)
-    private lazy var products = HomeProductsView(parent: self)
+    private lazy var products = HomeProductsView(action: openDetails)
 
     private lazy var vStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [
@@ -70,9 +72,6 @@ extension HomeViewController: ViewCodable {
     func setupConstraints() {
         spotlight
             .height(176)
-
-        digioCash
-            .height(136)
 
         products
             .height(142)

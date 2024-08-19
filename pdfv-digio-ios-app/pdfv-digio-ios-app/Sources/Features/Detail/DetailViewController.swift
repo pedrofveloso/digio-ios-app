@@ -89,16 +89,9 @@ extension DetailViewController: ViewCodable {
         titleLabel.text = banner.name
         descriptionLabel.text = banner.description
 
-        guard let imageUrl = banner.imageURL else { return }
+        guard let url = banner.imageURL else { return }
 
-        UIImage.load(from: imageUrl) { [weak self] image in
-            DispatchQueue.main.async {
-                guard let self else { return }
-
-                self.imageView.image = image
-                self.determineImageViewHeight(for: image)
-            }
-        }
+        imageView.loadImage(from: url)
     }
 }
 

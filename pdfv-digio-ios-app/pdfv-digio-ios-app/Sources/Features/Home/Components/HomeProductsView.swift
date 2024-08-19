@@ -15,19 +15,12 @@ final class HomeProductsView: UIView {
         return label
     }()
 
-    private lazy var products = HomeCollectionView<HomeProductsCell>(layout: .homeProducts, parent: parent)
+    private lazy var products = HomeCollectionView<HomeProductsCell>(layout: .homeProducts, action: action)
 
-    private lazy var vStack: UIStackView = {
-        let stack = UIStackView(arrangedSubviews: [title, products])
-        stack.axis = .vertical
-        stack.spacing = 16
-        return stack
-    }()
+    private let action: BannerAction
 
-    weak private var parent: UIViewController?
-
-    init(frame: CGRect = .zero, parent: UIViewController) {
-        self.parent = parent
+    init(frame: CGRect = .zero, action: @escaping BannerAction) {
+        self.action = action
         super.init(frame: frame)
         setup()
     }
@@ -45,12 +38,19 @@ final class HomeProductsView: UIView {
 
 extension HomeProductsView: ViewCodable {
     func setupSubviews() {
-        addSubview(vStack)
+        addSubview(title)
+        addSubview(products)
     }
 
     func setupConstraints() {
-        vStack
-            .horizontals(to: self, constant: 16)
-            .verticals(to: self)
+        title
+            .top(to: topAnchor)
+            .leading(to: leadingAnchor, constant: 16)
+            .trailing(to: trailingAnchor)
+
+        products
+            .top(to: title.bottomAnchor, constant: 16)
+            .horizontals(to: self)
+            .bottom(to: bottomAnchor)
     }
 }

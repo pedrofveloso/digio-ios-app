@@ -13,8 +13,10 @@ final class HomeCollectionView<T: UICollectionViewCell>: UICollectionView, UICol
 
     private weak var parent: UIViewController?
 
-    init(layout: UICollectionViewFlowLayout, parent: UIViewController?) {
-        self.parent = parent
+    private let action: BannerAction
+
+    init(layout: UICollectionViewFlowLayout, action: @escaping BannerAction) {
+        self.action = action
 
         super.init(frame: .zero, collectionViewLayout: layout)
 
@@ -59,7 +61,7 @@ final class HomeCollectionView<T: UICollectionViewCell>: UICollectionView, UICol
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let banner = banners[indexPath.row]
-        parent?.present(DetailViewController(banner: banner), animated: true)
+        action(banner)
     }
 }
 
@@ -81,7 +83,7 @@ extension UICollectionViewLayout {
     }
 
     static var homeProducts: UICollectionViewFlowLayout {
-        let sectionInset = 24.0
+        let sectionInset = 36.0
         let horizontalSpacing = 16.0
 
         let width = 100
