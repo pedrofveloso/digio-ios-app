@@ -23,8 +23,9 @@ jobs:
           xcode-version: latest-stable
 
       - name: Build and Test Project
+        working-directory: './pdfv-digio-ios-app'
         run: |
-          /usr/bin/pdfv-digio-ios-app/xcodebuild test \
+          /usr/bin/xcodebuild test \
             -scheme "$XC_SCHEME" \
             -testPlan  $XC_TESTPLAN \
             -destination "$XC_DESTINATION" \
