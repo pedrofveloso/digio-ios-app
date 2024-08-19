@@ -8,9 +8,7 @@
 import Foundation
 
 final class HomePresenter {
-
     private let service: HomeServiceable
-//    private(set) var model: HomeModel?
 
     private weak var delegate: HomeViewControllerDelegate?
 
@@ -29,17 +27,15 @@ final class HomePresenter {
                 DispatchQueue.main.async {
                     switch result {
                     case .success(let products):
-//                        self?.model = products
                         self?.delegate?.set(state: .loaded(products))
 
                     case .failure(let failure):
                         self?.delegate?.set(state: .error(failure.localizedDescription))
                     }
                 }
-
             }
         } catch {
-            print("\(error.localizedDescription)")
+            delegate?.set(state: .error(error.localizedDescription))
         }
     }
 }

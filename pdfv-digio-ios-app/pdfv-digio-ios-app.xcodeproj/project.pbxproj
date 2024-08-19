@@ -19,6 +19,7 @@
 		EC90ADD82C72AFFF00B3E728 /* HomeProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90ADD72C72AFFF00B3E728 /* HomeProductsView.swift */; };
 		EC90ADDB2C72D65100B3E728 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90ADDA2C72D65100B3E728 /* DetailViewController.swift */; };
 		EC90ADDD2C73000A00B3E728 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90ADDC2C73000A00B3E728 /* UIImageView+.swift */; };
+		EC90ADDF2C73015800B3E728 /* BannerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC90ADDE2C73015800B3E728 /* BannerProtocol.swift */; };
 		ECB1799F2C706AAB00DABCF7 /* HomeSpotlightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1799E2C706AAB00DABCF7 /* HomeSpotlightCell.swift */; };
 		ECB179A12C718BC500DABCF7 /* HomeDigioCashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A02C718BC500DABCF7 /* HomeDigioCashView.swift */; };
 		ECB179A32C71950600DABCF7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB179A22C71950600DABCF7 /* HomePresenter.swift */; };
@@ -67,6 +68,7 @@
 		EC90ADD72C72AFFF00B3E728 /* HomeProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProductsView.swift; sourceTree = "<group>"; };
 		EC90ADDA2C72D65100B3E728 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EC90ADDC2C73000A00B3E728 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
+		EC90ADDE2C73015800B3E728 /* BannerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerProtocol.swift; sourceTree = "<group>"; };
 		ECB1799E2C706AAB00DABCF7 /* HomeSpotlightCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSpotlightCell.swift; sourceTree = "<group>"; };
 		ECB179A02C718BC500DABCF7 /* HomeDigioCashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDigioCashView.swift; sourceTree = "<group>"; };
 		ECB179A22C71950600DABCF7 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 		EC2338C42C6FE7D100BEA0F8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				EC90ADDE2C73015800B3E728 /* BannerProtocol.swift */,
 				ECB179BE2C7299FE00DABCF7 /* HomeCollectionView.swift */,
 				ECB179A02C718BC500DABCF7 /* HomeDigioCashView.swift */,
 				EC2338C52C6FE81700BEA0F8 /* HomeHeaderView.swift */,
@@ -429,6 +432,7 @@
 				ECB179AE2C71B95B00DABCF7 /* LoadingViewController.swift in Sources */,
 				ECB179B72C71BDC300DABCF7 /* HomeModel.swift in Sources */,
 				EC90ADDB2C72D65100B3E728 /* DetailViewController.swift in Sources */,
+				EC90ADDF2C73015800B3E728 /* BannerProtocol.swift in Sources */,
 				ECB179C42C72A97D00DABCF7 /* UIView+.swift in Sources */,
 				ECB179A52C71B2F400DABCF7 /* HomeService.swift in Sources */,
 				EC2338C82C6FEADE00BEA0F8 /* UIView+Constraints.swift in Sources */,

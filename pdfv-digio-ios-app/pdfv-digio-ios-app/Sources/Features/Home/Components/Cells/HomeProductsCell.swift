@@ -7,21 +7,6 @@
 
 import UIKit
 
-protocol Banner {
-    var imageView: UIImageView { get }
-    func downloadImage(from url: URL)
-}
-
-extension Banner {
-    func downloadImage(from url: URL) {
-        UIImage.load(from: url) { image in
-            DispatchQueue.main.async {
-                imageView.image = image
-            }
-        }
-    }
-}
-
 final class HomeProductsCell: UICollectionViewCell, Banner {
     private(set) var imageView: UIImageView = {
         let imageView = UIImageView()
