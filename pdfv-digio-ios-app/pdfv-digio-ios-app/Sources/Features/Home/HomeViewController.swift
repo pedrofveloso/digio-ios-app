@@ -21,7 +21,7 @@ final class HomeViewController: UIViewController {
     private lazy var header = HomeHeaderView()
     private lazy var spotlight = HomeCollectionView<HomeSpotlightCell>(layout: .homeSpotlight, parent: self)
     private lazy var digioCash = HomeDigioCashView()
-    private lazy var products = HomeProductsView()
+    private lazy var products = HomeProductsView(parent: self)
 
     private lazy var vStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [

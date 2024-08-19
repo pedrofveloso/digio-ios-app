@@ -108,6 +108,8 @@ private extension DetailViewController {
         let aspectRatio = image.size.width / image.size.height
         let idealHeight = imageView.frame.width / aspectRatio
 
-        imageView.height(idealHeight)
+        if idealHeight <= image.size.width {
+            imageView.height(idealHeight)
+        }
     }
 }

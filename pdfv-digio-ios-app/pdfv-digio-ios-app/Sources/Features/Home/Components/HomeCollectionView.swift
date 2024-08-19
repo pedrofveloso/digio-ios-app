@@ -13,7 +13,7 @@ final class HomeCollectionView<T: UICollectionViewCell>: UICollectionView, UICol
 
     private weak var parent: UIViewController?
 
-    init(layout: UICollectionViewFlowLayout, parent: UIViewController) {
+    init(layout: UICollectionViewFlowLayout, parent: UIViewController?) {
         self.parent = parent
 
         super.init(frame: .zero, collectionViewLayout: layout)

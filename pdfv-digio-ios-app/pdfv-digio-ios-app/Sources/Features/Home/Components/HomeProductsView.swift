@@ -15,7 +15,7 @@ final class HomeProductsView: UIView {
         return label
     }()
 
-    private lazy var products = HomeCollectionView<HomeProductsCell>(layout: .homeProducts, parent: UIViewController())
+    private lazy var products = HomeCollectionView<HomeProductsCell>(layout: .homeProducts, parent: parent)
 
     private lazy var vStack: UIStackView = {
         let stack = UIStackView(arrangedSubviews: [title, products])
@@ -24,7 +24,10 @@ final class HomeProductsView: UIView {
         return stack
     }()
 
-    override init(frame: CGRect = .zero) {
+    weak private var parent: UIViewController?
+
+    init(frame: CGRect = .zero, parent: UIViewController) {
+        self.parent = parent
         super.init(frame: frame)
         setup()
     }
