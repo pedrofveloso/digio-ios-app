@@ -20,7 +20,7 @@ final class HomeViewController: UIViewController {
 
     private lazy var header = HomeHeaderView()
     private lazy var spotlight = HomeCollectionView<HomeSpotlightCell>(layout: .homeSpotlight, parent: self)
-    private lazy var digioCash = HomeDigioCashView()
+    private lazy var digioCash = HomeDigioCashView(action: openDetails)
     private lazy var products = HomeProductsView(parent: self)
 
     private lazy var vStack: UIStackView = {
@@ -55,6 +55,10 @@ final class HomeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presenter.fetchProducts()
+    }
+
+    private func openDetails(banner: HomeModel.Banner) {
+        present(DetailViewController(banner: banner), animated: true)
     }
 }
 

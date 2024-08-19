@@ -21,6 +21,7 @@ class HomeDigioCashView: UIView {
         imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = 8
         imageView.layer.masksToBounds = true
+        imageView.isUserInteractionEnabled = true
         return imageView
     }()
 
@@ -32,7 +33,14 @@ class HomeDigioCashView: UIView {
         return stack
     }()
 
-    override init(frame: CGRect = .zero) {
+    private let action: (HomeModel.Banner) -> Void
+    private var banner: HomeModel.Banner?
+
+    init(
+        frame: CGRect = .zero,
+        action: @escaping (HomeModel.Banner) -> Void
+    ) {
+        self.action = action
         super.init(frame: frame)
         setup()
     }
@@ -43,6 +51,8 @@ class HomeDigioCashView: UIView {
     }
 
     func update(banner: HomeModel.Banner) {
+        self.banner = banner
+
         title.text = banner.name
 
         setupTitleStyle()
@@ -66,6 +76,17 @@ private extension HomeDigioCashView {
         attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.gray, range: range)
         title.attributedText = attributedString
     }
+
+    func addTapActionToImageView() {
+        let tapGesture = UITapGestureRecognizer()
+        tapGesture.addTarget(self, action: #selector(self.executeAction))
+        imageView.addGestureRecognizer(tapGesture)
+    }
+
+    @objc func executeAction() {
+        guard let banner else { return }
+        action(banner)
+    }
 }
 
 extension HomeDigioCashView: ViewCodable {
@@ -77,5 +98,9 @@ extension HomeDigioCashView: ViewCodable {
         vStack
             .horizontals(to: self, constant: 16)
             .verticals(to: self)
+    }
+
+    func setupCompletion() {
+        addTapActionToImageView()
     }
 }
